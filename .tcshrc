@@ -1,0 +1,39 @@
+if ( $?term ) then
+
+set	notify
+set	ignoreeof
+set	promptchars	= "%#"
+set	prompt		= "[%c2]%# "
+set	history		= 1000
+set	savehist	= 1000 merge
+set	savedirs
+
+setenv	EDITOR	/usr/bin/vi
+setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"
+setenv	GIT_AUTHER_EMAIL	"nshiota1@gw.nsw.co.jp"
+
+alias	j	'jobs -l'
+alias	h	'history 15'
+alias	H	'history | less'
+alias	d	'dirs -v'
+alias	pd	pushd
+alias	pp	popd
+alias	d1	'pushd +1'
+alias	d2	'pushd +2'
+alias	d3	'pushd +3'
+alias	d4	'pushd +4'
+alias	d5	'pushd +5'
+alias	d6	'pushd +6'
+alias	more	less
+alias	rm	'rm -i'
+alias	cp	'cp -i'
+alias	mv	'mv -i'
+alias	ls	'ls --color=auto -aF'
+alias	gdb	'gdb -q'
+alias	bc	'bc -ql'
+alias	dif	'diff -u =1'
+
+bindkey	'^w'	backward-delete-word
+stty erase '^h'
+
+endif
