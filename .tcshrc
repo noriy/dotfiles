@@ -7,6 +7,7 @@ set	prompt		= "[%c2]%# "
 set	history		= 1000
 set	savehist	= 1000 merge
 set	savedirs
+set	dextract
 
 setenv	EDITOR	/usr/bin/vi
 setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"

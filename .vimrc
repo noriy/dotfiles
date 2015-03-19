@@ -1,7 +1,7 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 " if !1 | finish | endif
 set nocompatible	" Be IMproved
-set backspace=
+"set backspace=
 
 if has('vim_starting')
 	" Required:
@@ -19,7 +19,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " NeoBundle で管理するプラグインを追加します。
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
@@ -30,7 +29,7 @@ NeoBundle 'twerth/ir_black'
 NeoBundle 'hotchpotch/perldoc-vim'
 NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'vim-scripts/errormarker.vim'
+"NeoBundle 'vim-scripts/errormarker.vim'
 
 
 call neobundle#end()
