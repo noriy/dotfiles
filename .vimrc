@@ -31,6 +31,10 @@ NeoBundle 'vim-perl/vim-perl'
 NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'vim-scripts/errormarker.vim'
 
+"NeoBundleのインストール方法
+"% mkdir -p ~.vim/bundle
+"% git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 
 call neobundle#end()
 
