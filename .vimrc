@@ -1,6 +1,7 @@
 " Note: Skip initialization for vim-tiny or vim-small.
 " if !1 | finish | endif
 set nocompatible	" Be IMproved
+set ambiwidth=double
 "set backspace=
 
 if has('vim_starting')
