@@ -6,7 +6,7 @@ set ambiwidth=double
 
 if has('vim_starting')
 	" Required:
-	set runtimepath+=$HOME/.vim/bundle/neobundle.vim/
+	set runtimepath+=$HOME/.vim/bundle/neobundle.vim/,$HOME/.vim/plugin
 endif
 
 " Required:
@@ -49,6 +49,10 @@ NeoBundleCheck
 colorscheme darkdevel
 filetype indent on
 syntax on
-:set encoding=utf-8
-:set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-:set fileformats=unix,dos,mac
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
+set fileformats=unix,dos,mac
+set autoindent
+if has("cscope")
+	set cscopequickfix=s-,c-,d-,i-,t-,e-
+endif
