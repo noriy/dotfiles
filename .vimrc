@@ -50,7 +50,7 @@ colorscheme darkdevel
 filetype indent on
 syntax on
 set encoding=utf-8
-set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
+set fileencodings=utf-8,euc-jp,iso-2022-jp,sjis
 set fileformats=unix,dos,mac
 set autoindent
 if has("cscope")
