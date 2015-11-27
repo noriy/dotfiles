@@ -12,7 +12,7 @@ set	path		= ($path /sbin /usr/sbin ~/bin)
 
 setenv	EDITOR	/usr/bin/vi
 setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"
-setenv	GIT_AUTHER_EMAIL	"nshiota1@gw.nsw.co.jp"
+setenv	GIT_AUTHER_EMAIL	"noriyuki.shiota@miraclelinux.com"
 setenv	VTE_CJK_WIDTH	auto
 
 alias	j	'jobs -l'
