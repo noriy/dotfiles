@@ -1,5 +1,5 @@
 " Note: Skip initialization for vim-tiny or vim-small.
-" if !1 | finish | endif
+if !1 | finish | endif
 set nocompatible	" Be IMproved
 set ambiwidth=double
 "set backspace=
@@ -33,9 +33,8 @@ NeoBundle 'thinca/vim-quickrun'
 "NeoBundle 'vim-scripts/errormarker.vim'
 
 "NeoBundleのインストール方法
-"% mkdir -p ~.vim/bundle
+"% mkdir -p ~/vim/bundle
 "% git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
 
 call neobundle#end()
 
@@ -56,3 +55,29 @@ set autoindent
 if has("cscope")
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
 endif
+
+
+"##### auto fcitx  ###########
+let g:input_toggle = 0
+function! Fcitx2en()
+	let s:input_status = system("fcitx-remote")
+	if s:input_status == 2
+		let g:input_toggle = 1
+		let l:a = system("fcitx-remote -c")
+	endif
+endfunction
+
+function! Fcitx2zh()
+	let s:input_status = system("fcitx-remote")
+	if s:input_status != 2 && g:input_toggle == 1
+		let l:a = system("fcitx-remote -o")
+		let g:input_toggle = 0
+	endif
+endfunction
+
+set ttimeoutlen=150
+" exit insert mode
+autocmd InsertLeave * call Fcitx2en()
+" enter insert mode
+autocmd InsertEnter * call Fcitx2zh()
+"##### auto fcitx end ######
