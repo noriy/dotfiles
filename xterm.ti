@@ -1,5 +1,5 @@
 #	Reconstructed via infocmp from file: /lib/terminfo/x/xterm
-xterm|xterm-debian|X11 terminal emulator,
+xterm|xterm-debian|xterm-256color|X11 terminal emulator,
 	am, bce, km, mc5i, mir, msgr, npc, xenl,
 	colors#8, cols#80, it#8, lines#24, pairs#64,
 	acsc=``aaffggiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~,
