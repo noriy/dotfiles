@@ -3,9 +3,9 @@ if ( $?term ) then
 set	notify
 set	ignoreeof
 set	promptchars	= "%#"
-set	prompt		= "[%c2]%# "
-set	history		= 1000
-set	savehist	= 1000 merge
+set	prompt		= "%{]0;%n@%m: %~%}[%c2]%# "
+set	history		= 5000
+set	savehist	= 5000 merge
 set	savedirs
 set	dextract
 set	path		= ($path /sbin /usr/sbin ~/bin)
@@ -27,6 +27,9 @@ alias	d3	'pushd +3'
 alias	d4	'pushd +4'
 alias	d5	'pushd +5'
 alias	d6	'pushd +6'
+alias	d7	'pushd +7'
+alias	d8	'pushd +8'
+alias	d9	'pushd +9'
 alias	more	less
 alias	rm	'rm -i'
 alias	cp	'cp -i'
@@ -39,6 +42,8 @@ alias	gdb	'gdb -q'
 alias	bc	'bc -ql'
 alias	dif	'diff -u =1'
 alias	z	suspend
+alias	cdd	'cd \!$; pushd >/dev/null; cd \!$; pushd >/dev/null'
+alias	dif	'diff -u =1/\!$ \!$'
 
 bindkey	'^w'	backward-delete-word
 stty erase '^h'
