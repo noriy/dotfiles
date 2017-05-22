@@ -11,6 +11,7 @@ set	dextract
 set	path		= ($path /sbin /usr/sbin ~/bin)
 
 setenv	EDITOR	/usr/bin/vi
+setenv	VISUAL	/usr/bin/vi
 setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"
 setenv	GIT_AUTHER_EMAIL	"noriyuki.shiota@miraclelinux.com"
 setenv	VTE_CJK_WIDTH	auto
