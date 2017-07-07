@@ -4,46 +4,12 @@ set nocompatible	" Be IMproved
 set ambiwidth=double
 "set backspace=
 
-if has('vim_starting')
-	" Required:
-	set runtimepath+=$HOME/.vim/bundle/neobundle.vim/,$HOME/.vim/plugin
-endif
+"
+" vim-jp/vimdoc-ja: vim 日本語help
+"
+set runtimepath+=~/.vim/vimdoc-ja
+set helplang=ja,en
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" ここから NeoBundle でプラグインを設定します
-
-" NeoBundle で管理するプラグインを追加します。
-NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-
-" IR_Black
-NeoBundle 'twerth/ir_black'
-
-NeoBundle 'hotchpotch/perldoc-vim'
-NeoBundle 'vim-perl/vim-perl'
-NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'vim-scripts/errormarker.vim'
-
-"NeoBundleのインストール方法
-"% mkdir -p ~/vim/bundle
-"% git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
-call neobundle#end()
-
-" Required:
-filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
 
 colorscheme darkdevel
 filetype indent on
@@ -75,7 +41,7 @@ function! Fcitx2zh()
 	endif
 endfunction
 
-set timeout timeoutlen=3000 ttimeoutlen=50
+"set timeout timeoutlen=3000 ttimeoutlen=50
 " exit insert mode
 autocmd InsertLeave * call Fcitx2en()
 " enter insert mode
