@@ -3,7 +3,7 @@ if ( $?term ) then
 set	notify
 set	ignoreeof
 set	promptchars	= "%#"
-set	prompt		= "%m[%c2]%# "
+set	prompt		= "%{[01;32m%}%m%{[00m%}:%{[01;34m%}%c2%{[00m%}%# "
 set	history		= 5000
 set	savehist	= 5000 merge
 set	savedirs
