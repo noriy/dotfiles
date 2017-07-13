@@ -3,6 +3,7 @@ if !1 | finish | endif
 set nocompatible	" Be IMproved
 set ambiwidth=double
 "set backspace=
+set runtimepath+=~/.vim/plugin
 
 "
 " vim-jp/vimdoc-ja: vim 日本語help
@@ -19,7 +20,9 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,sjis
 set fileformats=unix,dos,mac
 set autoindent
 if has("cscope")
+	" cscope -R -b -k -q ; -k: kernel mode
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
+	source ~/.vim/plugin/autoload_cscope.vim
 endif
 
 
