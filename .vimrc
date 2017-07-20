@@ -23,6 +23,10 @@ if has("cscope")
 	" cscope -R -b -k -q ; -k: kernel mode
 	set cscopequickfix=s-,c-,d-,i-,t-,e-
 	source ~/.vim/plugin/autoload_cscope.vim
+	set csverb
+	silent! map <unique> <C-\>p :cprev<CR>
+	silent! map <unique> <C-\>n :cnext<CR>
+	silent! map <unique> <C-\>r :gr -rI <C-R>=expand("<cword>")<CR> .<CR>
 endif
 
 
