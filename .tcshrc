@@ -8,6 +8,7 @@ set	history		= 5000
 set	savehist	= 5000 merge
 set	savedirs
 set	dextract
+set	nobeep
 set	path		= ($path /sbin /usr/sbin ~/bin)
 
 setenv	EDITOR	/usr/bin/vi
