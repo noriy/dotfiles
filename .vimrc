@@ -49,7 +49,7 @@ function! Fcitx2zh()
 	endif
 endfunction
 
-"set timeout timeoutlen=3000 ttimeoutlen=50
+set timeout timeoutlen=3000 ttimeoutlen=50
 " exit insert mode
 autocmd InsertLeave * call Fcitx2en()
 " enter insert mode
