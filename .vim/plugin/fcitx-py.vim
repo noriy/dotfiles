@@ -17,7 +17,6 @@ function! s:is_enable()
 endfunction
 
 if !s:is_enable()
-  throw 'is_enable failed'
   finish
 end
 
