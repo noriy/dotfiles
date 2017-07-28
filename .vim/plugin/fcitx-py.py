@@ -27,8 +27,13 @@ def fcitx_socket_file():
 
 # Send a message to fcitx.
 def fcitx_send(send_data, recv_size=0):
-    sock = socket.socket(socket.AF_UNIX)
-    sock.connect(fcitx_socket_file())
+    try:
+        sock = socket.socket(socket.AF_UNIX)
+        sock.connect(fcitx_socket_file())
+    except Exception as e:
+        sock.close()
+        return []
+
     try:
         sock.send(send_data)
         if recv_size > 0:
@@ -37,7 +42,6 @@ def fcitx_send(send_data, recv_size=0):
             return []
     finally:
         sock.close()
-
 
 # Get fcitx status
 def fcitx_is_active():
