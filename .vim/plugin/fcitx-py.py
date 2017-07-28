@@ -45,8 +45,13 @@ def fcitx_send(send_data, recv_size=0):
 
 # Get fcitx status
 def fcitx_is_active():
-    recv = fcitx_send(FCITX_STATUS, INT_SIZE)
-    if struct.unpack('i', recv)[0] == 2:
+    try:
+        recv = fcitx_send(FCITX_STATUS, INT_SIZE)
+        status = struct.unpack('i', recv)[0]
+    except:
+        return False
+
+    if status == 2:
         return True
     else:
         return False
