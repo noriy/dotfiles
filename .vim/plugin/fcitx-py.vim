@@ -4,6 +4,8 @@
 
 scriptencoding utf-8
 
+let g:fcitxpy_enabled = 0
+
 function! s:is_enable()
   " Check version: 'imaf' and 'imsf' are available or not.
   if !(v:version == 703 && has('patch1248') || v:version >= 704)
@@ -59,8 +61,9 @@ function! FcitxPySetup()
     call s:pyeval('fcitx_set_active(' . a:active . ')')
   endfunction
 
- "  set imactivatefunc=FcitxPySet
- " set imstatusfunc=FcitxPyGet
+  "set imactivatefunc=FcitxPySet
+  "set imstatusfunc=FcitxPyGet
+  let g:fcitxpy_enabled = 1
 endfunction
 
 if has('gui_running')

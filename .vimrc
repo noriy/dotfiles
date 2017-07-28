@@ -32,26 +32,29 @@ endif
 
 "##### auto fcitx  ###########
 source ~/.vim/plugin/fcitx-py.vim
-let g:input_toggle = 0
-function! Fcitx2en()
-	let s:input_status = FcitxPyGet()
-	if s:input_status == 1
-		let g:input_toggle = 1
-		let l:a = FcitxPySet(0)
-	endif
-endfunction
 
-function! Fcitx2zh()
-	let s:input_status = FcitxPyGet()
-	if s:input_status != 1 && g:input_toggle == 1
-		let l:a = FcitxPySet(1)
-		let g:input_toggle = 0
-	endif
-endfunction
+if g:fcitxpy_enabled == 1
+	let g:input_toggle = 0
+	function! Fcitx2en()
+		let s:input_status = FcitxPyGet()
+		if s:input_status == 1
+			let g:input_toggle = 1
+			let l:a = FcitxPySet(0)
+		endif
+	endfunction
 
-set timeout timeoutlen=3000 ttimeoutlen=50
-" exit insert mode
-autocmd InsertLeave * call Fcitx2en()
-" enter insert mode
-autocmd InsertEnter * call Fcitx2zh()
-"##### auto fcitx end ######
+	function! Fcitx2zh()
+		let s:input_status = FcitxPyGet()
+		if s:input_status != 1 && g:input_toggle == 1
+			let l:a = FcitxPySet(1)
+			let g:input_toggle = 0
+		endif
+	endfunction
+
+	set timeout timeoutlen=3000 ttimeoutlen=50
+	" exit insert mode
+	autocmd InsertLeave * call Fcitx2en()
+	" enter insert mode
+	autocmd InsertEnter * call Fcitx2zh()
+	"##### auto fcitx end ######
+endif
