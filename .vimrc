@@ -4,6 +4,7 @@ set nocompatible	" Be IMproved
 set ambiwidth=double
 "set backspace=
 set runtimepath+=~/.vim/plugin
+set path=.,include,/usr/include
 
 "
 " vim-jp/vimdoc-ja: vim 日本語help
