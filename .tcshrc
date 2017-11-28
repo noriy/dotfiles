@@ -46,6 +46,7 @@ alias	dif	'diff -u =1'
 alias	z	suspend
 alias	cdd	'cd \!$; pushd >/dev/null; cd \!$; pushd >/dev/null'
 alias	dif	'diff -u =1/\!$ \!$'
+alias	lgrep	'grep --color=always \!* | less -R'
 
 bindkey	'^w'	backward-delete-word
 stty erase '^h'
