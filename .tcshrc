@@ -10,12 +10,14 @@ set	savedirs
 set	dextract
 set	nobeep
 set	path		= ($path /sbin /usr/sbin ~/bin)
+set	lxchome		= ~/work/lxc/ubuntu14/home/nori
 
 setenv	EDITOR	/usr/bin/vi
 setenv	VISUAL	/usr/bin/vi
 setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"
 setenv	GIT_AUTHER_EMAIL	"noriyuki.shiota@miraclelinux.com"
 setenv	VTE_CJK_WIDTH	auto
+setenv	LESS	qR
 
 alias	j	'jobs -l'
 alias	h	'history 15'
