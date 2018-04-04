@@ -27,6 +27,13 @@ if has("cscope")
 	set csverb
 	silent! map <unique> <C-\>p :cprev<CR>
 	silent! map <unique> <C-\>n :cnext<CR>
+	silent! map <unique> <C-\>c :cs f c <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>d :cs f d <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>f :cs f f <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>g :cs f g <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>i :cs f i <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>s :cs f s <C-R>=expand("<cword>")<CR><CR>
+	silent! map <unique> <C-\>t :cs f t <C-R>=expand("<cword>")<CR><CR>
 	silent! map <unique> <C-\>r :gr -rI <C-R>=expand("<cword>")<CR> .<CR>
 endif
 
