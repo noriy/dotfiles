@@ -10,7 +10,6 @@ set	savedirs
 set	dextract
 set	nobeep
 set	path		= ($path /sbin /usr/sbin ~/bin)
-set	lxchome		= ~/work/lxc/ubuntu14/home/nori
 
 if ( -e /usr/bin/vi ) then
 	setenv	EDITOR	/usr/bin/vi
@@ -25,8 +24,6 @@ else
 	setenv	PAGER	/usr/bin/more
 endif
 
-setenv	GIT_AUTHER_NAME		"Noriyuki Shiota"
-setenv	GIT_AUTHER_EMAIL	"noriyuki.shiota@miraclelinux.com"
 setenv	VTE_CJK_WIDTH	auto
 setenv	LESS	qR
 
@@ -62,6 +59,6 @@ alias	dif	'diff -u =1/\!$ \!$'
 alias	lgrep	'grep --color=always \!* | less -R'
 
 bindkey	'^w'	backward-delete-word
-stty erase '^h' start undef stop undef
+stty erase '^h' start undef stop undef discard undef
 
 endif
