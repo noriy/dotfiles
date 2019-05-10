@@ -24,6 +24,7 @@ alias   d9='pushd +9'
 HISTSIZE=5000
 if [ "$UID" -eq 0 ]; then
 	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]# '
+	export TERMINFO=$HOME/.terminfo
 else
 	PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 fi
