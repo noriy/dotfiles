@@ -5,5 +5,3 @@
 	default = current
 [color]
 	ui = auto
-[url "git@github.com:"]
-	pushinsteadof = https://github.com/
