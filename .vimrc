@@ -46,7 +46,8 @@ if g:fcitxpy_enabled == 1
 	function! Fcitx2en()
 		let s:input_status = FcitxPyGet()
 		if s:input_status == 1
-			let g:input_toggle = 1
+"			let g:input_toggle = 1
+			let g:input_toggle = 0
 			let l:a = FcitxPySet(0)
 		endif
 	endfunction
