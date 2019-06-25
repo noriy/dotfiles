@@ -11,7 +11,7 @@ set	dextract
 set	nobeep
 set	pushdsilent
 set	symlinks	= chase
-set	path		= ($path /sbin /usr/sbin ~/bin)
+set	path		= ($path /snap/bin /sbin /usr/sbin ~/bin)
 
 if ( -e /usr/bin/vi ) then
 	setenv	EDITOR	/usr/bin/vi
