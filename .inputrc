@@ -1,3 +1,4 @@
 Control-w: unix-filename-rubout
 Control-d: complete
 set show-all-if-ambiguous on
+set bell-style visible
