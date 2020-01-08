@@ -119,8 +119,9 @@ let g:Darkdevel.comment.guibg   = 'NONE'
   highlight Number            ctermfg=DarkGreen   guifg=#64C896
   highlight Boolean           ctermfg=DarkBlue    guifg=#6496C8
   highlight Float             ctermfg=DarkGreen   guifg=#64C896
-
-  highlight Comment           ctermfg=DarkGray    guifg=#646464     ctermbg=NONE      guibg=NONE
+ 
+" highlight Comment           ctermfg=DarkGray    guifg=#646464     ctermbg=NONE      guibg=NONE
+  highlight Comment           ctermfg=Magenta    guifg=#646464     ctermbg=NONE      guibg=NONE
 
 " Style for identifier and variable names
 " ----------------------------------------
