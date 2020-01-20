@@ -33,9 +33,6 @@ endif
 if (  -r ~/.colorrc ) then
 	source ~/.colorrc
 endif
-if (  -r ~/.cshdirs ) then
-	source ~/.cshdirs
-endif
 
 setenv	VTE_CJK_WIDTH	auto
 setenv	LESS		qR
@@ -80,4 +77,15 @@ if ( `stty -a | grep -q discard` ) then
 else
 	stty flush undef
 endif
+
+# read .cshdirs
+if ( ! $?loginsh ) then
+	set dirs = `cat ~/.cshdirs`
+	while ( "$#dirs" >= 2 )
+		if ( -d "$dirs[2]" ) then
+			eval "$dirs[1] $dirs[2]"
+		endif
+		shift dirs
+		shift dirs
+	end
 endif

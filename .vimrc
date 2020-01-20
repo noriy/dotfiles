@@ -18,7 +18,8 @@ filetype indent on
 syntax on
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,iso-2022-jp,sjis
-set fileformats=unix,dos,mac
+"set fileformats=unix,dos,mac
+set fileformats=unix
 set autoindent
 if has("cscope")
 	" cscope -R -b -k -q ; -k: kernel mode
